@@ -1,28 +1,110 @@
 <HTML>
 <HEAD>
 <TITLE>Oliver Borner</TITLE>
-</HEAD>
-<BODY BGCOLOR="#1b1b1b" TEXT="#fff">
-<h1 style="color:#000">Projects</h1>
+<style>
+	*, :after, :before, html {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 10px;
+    background-color: #000084;
+    color: #bbb;
+    font-family: 'more_perfect_dos_vgaregular', 'Courier New', monospace;
+    font-size: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  <UL>
-<LI><A HREF="https://oliverborner.github.io/darts">Darts Counter</A></LI>
+a{color:#fff;}
 
-</UL>
-  <h3>About</h3>
-  <p>I'm currently working as a fulltime forntend developer (Head of Frontend) at a larger company.
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+.notfound {
+    width: 80%;
+    background-color: #000084;
+}
+
+.row {
+    text-align: left;
+}
+
+.centered {
+    text-align: center;
+}
+
+.inverted {
+    background-color: #bbb;
+    color: #000084;
+}
+
+.shadow {
+    background-color: #000;
+    color: #000084;
+}
+
+.blink {
+    animation: blinkingText .8s infinite;
+}
+
+@keyframes blinkingText {
+    0% {
+        opacity: 0;
+    }
     
-  </p>
+    49% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+}
+</style>
+</HEAD>
+<BODY">
+	<div class="notfound">
+	 <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;</div>
+    <div class="centered"><span class="inverted">&nbsp;4&nbsp;0&nbsp;4&nbsp;</span><span class="shadow">&nbsp;</span></div>
+    <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="shadow">&nbsp;</span></div>
+    <div class="centered">&nbsp;<span class="shadow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    <div class="row">&nbsp;</div>
 
- <h3>How to Reach Me</h3>
-  You can send email for me to oliverborner (at) gmail.com.
-<h3>Links</h3>
-<UL>
-<LI><A HREF="https://github.com/oliverborner">My Github Page</A></LI>
-<LI><a href="https://oliverborner.com">My Artist Page</a></LI>
+	 <div class="row"><h1 style="color:#000">Projects</h1></div>
 
-</UL>
+	 <div class="row"><A HREF="https://oliverborner.github.io/darts">Darts Counter</A></div>
+
+
+	  <div class="row"><h3>About</h3></div>
+	 <div class="row">I'm currently working as a fulltime forntend developer (Head of Frontend) at a larger company.</div>
+	    
+	 
+
+	  <div class="row"><h3>How to Reach Me</h3></div>
+	   <div class="row">You can send email for me to oliverborner (at) gmail.com.</div>
+	 <div class="row"><h3>Links</h3></div>
+
+	 <div class="row"><A HREF="https://github.com/oliverborner">My Github Page</A></div>
+	 <div class="row"><a href="https://oliverborner.com">My Artist Page</a></div>
+	 <div class="row">...<span class="blink">&#9608;</span></div>
+
+
+</div>
+
 
 </BODY>
 </HTML>
+
