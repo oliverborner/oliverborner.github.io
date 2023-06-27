@@ -1,110 +1,102 @@
+<!-- 
+    // Disclaimer
+    //
+    // hey bro why you are inspecting low level code??
+    // try to copy some basic html and css? no way bro :D
+    // 
+-->
 <HTML>
 <HEAD>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <TITLE>Oliver Borner</TITLE>
 <style>
 	*, :after, :before, html {
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Fira";
+  src: url("FiraCode-SemiBold.woff2") format('woff2');
+
+}
+
+@font-face {
+    font-family: "FiraBold";
+  src: url("FiraCode-Bold.woff2") format('woff2');
+}
+
 body {
-    margin: 10px;
-    background-color: #000084;
-    color: #bbb;
-    font-family: 'more_perfect_dos_vgaregular', 'Courier New', monospace;
-    font-size: 10px;
+
+    background-color: #ffffff;
+    color: #151515;
+    font-family: 'Fira', sans-serif;
+    font-size: .8rem;
     height: 100vh;
+    width: 100%;
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-a{color:#fff;}
-
-@media (min-width: 600px) {
-    body {
-        font-size: 16px;
-    }
+section{
+    border-bottom: 1px solid #151515;
+    padding-bottom: .7rem;
 }
 
-@media (min-width: 900px) {
-    body {
-        font-size: 24px;
-        font-weight: 400;
-    }
+a{
+    color:#151515;
+    border-bottom: 1px solid #151515;
 }
 
-.notfound {
-    width: 80%;
-    background-color: #000084;
+h3{
+    padding-top: .7rem;
+    border-bottom: 1px solid #151515;
 }
-
-.row {
-    text-align: left;
-}
-
-.centered {
-    text-align: center;
-}
-
-.inverted {
-    background-color: #bbb;
-    color: #000084;
-}
-
-.shadow {
-    background-color: #000;
-    color: #000084;
-}
-
-.blink {
-    animation: blinkingText .8s infinite;
-}
-
-@keyframes blinkingText {
-    0% {
-        opacity: 0;
-    }
-    
-    49% {
-        opacity: 0;
-    }
-    
-    50% {
-        opacity: 1;
-    }
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    height: 50px;
+    border-bottom: 1px solid #151515;
+    background-color: #ffffff;
+    z-index: 100;
+    font-size: 1.2rem;
+    font-family: 'FiraBold';
 }
 </style>
-</HEAD>
-<BODY">
-	<div class="notfound">
-	 <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;</div>
-    <div class="centered"><span class="inverted">&nbsp;4&nbsp;0&nbsp;4&nbsp;</span><span class="shadow">&nbsp;</span></div>
-    <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="shadow">&nbsp;</span></div>
-    <div class="centered">&nbsp;<span class="shadow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-    <div class="row">&nbsp;</div>
+</head>
+<body>
+    <nav>
+        Oliver Borner
+    </nav>
+    <div class="wrapper">
+        <section class="projects">
+            <h3>Projects</h3>
+            <A HREF="https://oliverborner.github.io/darts">Darts Counter</A>
+            <A HREF="https://pantomimeparty.de/">Pantomime Party</A>
+        </section>
 
-	 <div class="row"><h1 style="color:#000">Projects</h1></div>
+        <section class="about">
+            <h3>About</h3>
+            I'm currently working as a fulltime frontend developer (Head of Frontend) at a larger company.
+        </section>
 
-	 <div class="row"><A HREF="https://oliverborner.github.io/darts">Darts Counter</A></div>
+        <section class="contact">
+            <h3>How to Reach Me</h3>
+            You can send me an email to oliverborner (at) gmail.com.
+        </section>
+        
+        <section class="contact">
+            <h3>Links</h3>
 
+            <A HREF="https://github.com/oliverborner">My Github Page</A>
+            <a href="https://oliverborner.com">My Artist Page</a>
+        </section>
 
-	  <div class="row"><h3>About</h3></div>
-	 <div class="row">I'm currently working as a fulltime frontend developer (Head of Frontend) at a larger company.</div>
-	    
-	 
-
-	  <div class="row"><h3>How to Reach Me</h3></div>
-	   <div class="row">You can send email for me to oliverborner (at) gmail.com.</div>
-	 <div class="row"><h3>Links</h3></div>
-
-	 <div class="row"><A HREF="https://github.com/oliverborner">My Github Page</A></div>
-	 <div class="row"><a href="https://oliverborner.com">My Artist Page</a></div>
-	 <div class="row">...<span class="blink">&#9608;</span></div>
-
-
-</div>
-
+    </div>
 
 </BODY>
 </HTML>
-
