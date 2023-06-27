@@ -25,10 +25,25 @@
   src: url("FiraCode-Bold.woff2") format('woff2');
 }
 
-body {
+:root {
+    --primary-color: #151515;
+    --secondary-color: #626262;
+    --font-color: #151515;
+    --bg-color: #fff;
+    --heading-color: #151515;
+}
 
-    background-color: #ffffff;
-    color: #151515;
+[data-theme="dark"] {
+    --primary-color: #fff;
+    --secondary-color: #c3c3c3;
+    --font-color: #dfdfdf;
+    --bg-color: #151515;
+    --heading-color: #dfdfdf;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
     font-family: 'Fira', sans-serif;
     font-size: .8rem;
     height: 100vh;
@@ -42,18 +57,18 @@ body {
 }
 
 section{
-    border-bottom: 1px solid #151515;
+    border-bottom: 1px solid  var(--primary-color);
     padding-bottom: .7rem;
 }
 
 a{
-    color:#151515;
-    border-bottom: 1px solid #151515;
+    color: var(--primary-color);
+    border-bottom: 1px solid  var(--primary-color);
 }
 
 h3{
     padding-top: .7rem;
-    border-bottom: 1px solid #151515;
+    border-bottom: 1px solid  var(--primary-color);
 }
 nav{
     position: fixed;
@@ -62,9 +77,9 @@ nav{
     width: 100%;
     padding: 1rem 0;
     height: 50px;
-    border-bottom: 1px solid #151515;
-    border-top: 1px solid #151515;
-    background-color: #ffffff;
+    border-bottom: 1px solid  var(--primary-color);
+    border-top: 1px solid  var(--primary-color);
+    background-color:  var(--bg-color);
     z-index: 100;
     font-size: 1.2rem;
     font-family: 'FiraBold';
@@ -73,20 +88,103 @@ nav{
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 .wrapper{
     width: 100%;
     overflow-x: hidden;
     padding: 1rem;
     max-width: 1000px;
+
 }
+.switcher{
+  padding: 1rem;
+  margin-top: -1.5rem;
+}
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 52px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: var(--bg-color);
+  border: 1px solid var(--font-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color:  var(--font-color);
+  bottom: 5px;
+  content: "";
+  height: 20px;
+  left: 5px;
+  position: absolute;
+  transition: .4s;
+  width: 20px;
+}
+
+input:checked + .slider {
+  background-color: var(--bg-color);
+  border: 1px solid var(--font-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
 </style>
 </head>
 <body>
     <nav>
         <div class="nav-wrapper">
             Oliver Borner
+
+       
+    
+        <div class="switcher">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+            <!-- <em>Enable Dark Mode!</em> -->
         </div>
+     </div>
+
+    </div>
        
     </nav>
     <div class="wrapper">
@@ -118,6 +216,30 @@ nav{
         </section>
 
     </div>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            else {        document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }    
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
 
 </BODY>
 </HTML>
