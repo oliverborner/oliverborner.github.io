@@ -33,10 +33,12 @@ body {
     font-size: .8rem;
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 section{
@@ -58,7 +60,7 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0;
     height: 50px;
     border-bottom: 1px solid #151515;
     border-top: 1px solid #151515;
@@ -67,22 +69,40 @@ nav{
     font-size: 1.2rem;
     font-family: 'FiraBold';
 }
+.nav-wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 1rem;
+}
+.wrapper{
+    width: 100%;
+    overflow-x: hidden;
+    padding: 1rem;
+    max-width: 1000px;
+}
 </style>
 </head>
 <body>
     <nav>
-        Oliver Borner
+        <div class="nav-wrapper">
+            Oliver Borner
+        </div>
+       
     </nav>
     <div class="wrapper">
         <section class="projects">
             <h3>Projects</h3>
-            <A HREF="https://oliverborner.github.io/darts">Darts Counter</A>
-            <A HREF="https://pantomimeparty.de/">Pantomime Party</A>
+            <A HREF="https://oliverborner.github.io/darts" target="_blank">Darts Counter</A>
+            <A HREF="https://pantomimeparty.de/" target="_blank">Pantomime Party</A>
+            <A HREF="https://skatekam.com/" target="_blank">SkateKam</A>
         </section>
 
         <section class="about">
             <h3>About</h3>
-            I'm currently working as a fulltime frontend developer (Head of Frontend) at a larger company.
+            I am currently employed as a full-time Frontend Developer, serving as the Head of Frontend at a prominent company.
+            Born in 1986, I witnessed the evolution of the Internet and what initially started as a hobby eventually transformed 
+            into a fulfilling career. During my formative years, at the tender age of 14, I spent my vacations engrossed in 
+            programming language books purely for the joy of learning.
         </section>
 
         <section class="contact">
